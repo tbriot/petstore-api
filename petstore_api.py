@@ -4,11 +4,27 @@ from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 
-class HelloWorld(Resource):
+class Pets(Resource):
     def get(self):
-        return {'hello': 'world'}
+        return [
+			{
+				"id": 1,
+				"type": "dog",
+				"price": 249.99
+			},
+			{
+				"id": 2,
+				"type": "cat",
+				"price": 124.99
+			},
+			{
+				"id": 3,
+				"type": "fish",
+				"price": 0.99
+			}
+		]
 
-api.add_resource(HelloWorld, '/')
+api.add_resource(Pets, '/api/pets')
 
 if __name__ == '__main__':
-    app.run(debug=True, port=80)
+    app.run(host='0.0.0.0', debug=True, port=80)
