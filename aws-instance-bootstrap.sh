@@ -1,2 +1,4 @@
-sudo yum install git -y
-sudo git clone https://github.com/tbriot/my-portfolio-app.git
+sudo yum -y update
+sudo yum -y install git python3 python-pip
+sudo git clone https://github.com/tbriot/petstore-api.git
+sudo pip install -r requirements.txt
