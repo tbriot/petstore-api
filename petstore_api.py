@@ -37,4 +37,4 @@ api.add_resource(Pets, '/api/pets')
 api.add_resource(Pet, '/api/pet/<int:pet_id>')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, port=80)
+    app.run(host='127.0.0.1', debug=True, port=8080)
